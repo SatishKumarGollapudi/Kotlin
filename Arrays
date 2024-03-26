@@ -1,0 +1,49 @@
+fun main() {
+    
+// Declare an array of integers
+val numbers = arrayOf(1, 5, 2, 4, 3,5,2)
+
+// Declare an array of strings
+val names = arrayOf("Alice", "Bob", "Charlie", "Dave")
+
+// Declare an array of a specific size
+val array = arrayOfNulls<Int>(10)
+
+// Declare an array of integers with a specified size and initial value
+val array1 = Array<Int>(7) { i -> i*i }
+val filledArray = Array<Int>(5) { index -> index * 2 } // Other type: BooleanArray, ShortArray, DoubleArray and etc.
+
+// Access an element at a specific index
+val firstNumber = numbers.first()
+array1.sort()
+numbers.sortDescending()
+// Access the last element of an array
+val lastNumber = numbers.last()
+    for(i in numbers)
+    {
+        println(i)
+    }
+    for (i in names.indices) {
+    println("${i}: ${names[i]}")
+}
+    numbers.shuffle()
+   val even= numbers.filter{it%2==0}
+println(numbers.size)
+println(numbers.sum())
+println(numbers.joinToString())
+println(names.joinToString())
+println(array.joinToString())
+println(array1.joinToString())
+println(filledArray.joinToString())
+println(firstNumber)
+println(lastNumber)
+println(numbers.min())
+println(numbers.max())
+println(numbers.joinToString())
+println(array1.joinToString())
+println(even.joinToString())
+println((array1.sortedArrayDescending()).joinToString())
+println((numbers.sortedArray()).joinToString())
+println(array1.toList())
+println(numbers.toSet())
+}
